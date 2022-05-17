@@ -1,0 +1,43 @@
+<Home>:
+	orientation: 'vertical'
+	ScrollView:
+		BoxLayout:
+			orientation: 'vertical'
+			id: aparelhos
+			size_hint_y: None
+			height: self.minimum_height
+	Botao_1:
+		text: 'atualizar'
+		on_release: root.atualizar()
+		
+			
+<Dispositivos>:
+	orientation: 'vertical'
+	size_hint_y: None
+	height: 100
+	Spinner:
+		size_hint_y: None
+		height: '20dp'
+		font_size: '15dp'
+		id: host
+		text: ''
+		values: ()
+	BoxLayout:
+		padding: 2
+		Botao_0:
+			text: 'ADB Wifi'
+			on_release: root.adb_wifi()
+		Botao_0:
+			text: 'ADB Usb'
+			on_release: root.adb_usb()
+		Botao_0:
+			text: 'REMOTE'
+			on_release: root.remote()
+		
+<Botao_0@Button>:
+	size_hint: None, None
+	height: '70dp'
+	width: '80dp'
+<Botao_1@Button>:
+	size_hint_y: None
+	height: '70dp'
